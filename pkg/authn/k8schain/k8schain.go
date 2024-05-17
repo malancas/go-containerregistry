@@ -30,7 +30,7 @@ import (
 
 var (
 	amazonKeychain authn.Keychain = authn.NewKeychainFromHelper(ecr.NewECRHelper(ecr.WithLogger(io.Discard)))
-	azureKeychain  authn.Keychain = authn.NewKeychainFromHelper(credhelper.NewACRCredentialsHelper())
+	azureKeychain  authn.Keychain = authn.NewKeychainFromHelper(NewACRHelper())
 )
 
 // Options holds configuration data for guiding credential resolution.
